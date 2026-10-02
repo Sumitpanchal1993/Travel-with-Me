@@ -1,0 +1,172 @@
+.topNavBarBase {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    padding: 9px clamp(14px, 3vw, 32px);
+    color: #18384a;
+    background: linear-gradient(110deg, rgba(255, 255, 255, 0.82), rgba(229, 244, 249, 0.68));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 24px rgba(37, 79, 101, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+}
+
+.topNavLogo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex: 0 0 auto;
+}
+
+.topNavLogo img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+}
+
+.topNavLogo > div {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+}
+
+.topNavLogo p {
+    color: #18384a;
+    font-size: 0.88rem;
+    font-weight: 750;
+}
+
+.topNavoptions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(14px, 3vw, 36px);
+}
+
+.topNavoptions > div:first-child ul {
+    display: flex;
+    align-items: center;
+    gap: clamp(12px, 2vw, 24px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.topNavoptions > div:first-child li {
+    color: #426378;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color 160ms ease;
+}
+
+.topNavoptions > div:first-child li:hover {
+    color: #14788e;
+}
+
+.topNavoptions > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.topNavoptions button {
+    min-height: 38px;
+    padding: 7px 13px;
+    border: 1px solid rgba(22, 124, 145, 0.26);
+    border-radius: 9px;
+    color: #176f83;
+    background: rgba(255, 255, 255, 0.52);
+    font: inherit;
+    font-size: 0.86rem;
+    font-weight: 650;
+    white-space: nowrap;
+    transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.topNavoptions button:last-child {
+    color: #fff;
+    background: linear-gradient(135deg, #167c91, #236b91);
+    border-color: transparent;
+    box-shadow: 0 4px 10px rgba(22, 103, 132, 0.18);
+}
+
+.topNavoptions button:hover {
+    transform: translateY(-1px);
+    background-color: rgba(255, 255, 255, 0.82);
+}
+
+.topNavoptions button:last-child:hover {
+    background: linear-gradient(135deg, #126e81, #1d5e80);
+    box-shadow: 0 6px 14px rgba(22, 103, 132, 0.24);
+}
+
+.topNavoptions button:focus-visible {
+    outline: 3px solid rgba(22, 124, 145, 0.3);
+    outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+    .topNavBarBase {
+        gap: 10px;
+        padding: 8px 12px;
+    }
+
+    .topNavLogo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .topNavLogo p {
+        font-size: 0.78rem;
+    }
+
+    .topNavoptions {
+        gap: 0;
+    }
+
+    .topNavoptions > div:first-child {
+        display: none;
+    }
+
+    .topNavoptions > div:last-child {
+        gap: 6px;
+    }
+
+    .topNavoptions button {
+        min-height: 36px;
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .topNavLogo {
+        gap: 5px;
+    }
+
+    .topNavLogo img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .topNavLogo p {
+        font-size: 0.72rem;
+    }
+
+    .topNavoptions button {
+        padding-inline: 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .topNavoptions > div:first-child li,
+    .topNavoptions button {
+        transition: none;
+    }
+}

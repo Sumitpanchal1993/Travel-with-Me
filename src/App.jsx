@@ -1,5 +1,5 @@
 import './App.css'
-import Bottomoptions from './Components/Bottomoptions'
+import FooterBar from './Components/FooterBar'
 import RideCard from './Components/RideCard'
 import TopNavBar from './Components/TopNavBar'
 import BookRide from './Pages/BookRide'
@@ -15,11 +15,11 @@ function App() {
     </header>
     <main>
       {true && <LoaderPage/> }      
-      <RideCard/>
+      {/* <RideCard/> */}
       <Home/>
     </main>
     <footer>
-      <Bottomoptions/>
+      <FooterBar/>
     </footer>
     </>
       
