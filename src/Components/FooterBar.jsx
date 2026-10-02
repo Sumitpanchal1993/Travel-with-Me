@@ -1,25 +1,31 @@
+import { useState } from 'react'
 import './FooterBar.css'
 
 function FooterBar() {
+  const [activeOption, setActiveOption] = useState('Find Ride')
+  const options = [
+    { label: 'Register Ride', icon: 'add_road' },
+    { label: 'Find Ride', icon: 'search' },
+    { label: 'My Trips', icon: 'luggage' },
+    { label: 'My Profile', icon: 'person' },
+  ]
+
   return (
     <nav className="footerBarBase" aria-label="Mobile navigation">
       <ul>
-        <li>
-          <span className="material-symbols-rounded" aria-hidden="true">add_road</span>
-          <span>Register Ride</span>
-        </li>
-        <li>
-          <span className="material-symbols-rounded" aria-hidden="true">search</span>
-          <span>Find Ride</span>
-        </li>
-        <li>
-          <span className="material-symbols-rounded" aria-hidden="true">luggage</span>
-          <span>My Trips</span>
-        </li>
-        <li>
-          <span className="material-symbols-rounded" aria-hidden="true">person</span>
-          <span>My Profile</span>
-        </li>
+        {options.map(({ label, icon }) => (
+          <li key={label}>
+            <button
+              type="button"
+              className={activeOption === label ? 'active' : ''}
+              aria-pressed={activeOption === label}
+              onClick={() => setActiveOption(label)}
+            >
+              <span className="material-symbols-rounded" aria-hidden="true">{icon}</span>
+              <span>{label}</span>
+            </button>
+          </li>
+        ))}
       </ul>
     </nav>
   )
