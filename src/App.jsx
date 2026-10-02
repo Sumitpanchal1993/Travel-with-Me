@@ -1,12 +1,24 @@
+import { useEffect, useState } from 'react'
 import './App.css'
 import FooterBar from './Components/FooterBar'
-import RideCard from './Components/RideCard'
 import TopNavBar from './Components/TopNavBar'
-import BookRide from './Pages/BookRide'
 import Home from './Pages/Home'
 import LoaderPage from "./Pages/LoaderPage"
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const finishLoading = () => setIsLoading(false)
+
+    if (document.readyState === 'complete') {
+      finishLoading()
+      return
+    }
+
+    window.addEventListener('load', finishLoading, { once: true })
+    return () => window.removeEventListener('load', finishLoading)
+  }, [])
 
   return (
     <>
@@ -14,7 +26,7 @@ function App() {
       <TopNavBar/>
     </header>
     <main>
-      {true && <LoaderPage/> }      
+      <LoaderPage isLoading={isLoading} />
       {/* <RideCard/> */}
       <Home/>
     </main>
