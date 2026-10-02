@@ -1,0 +1,185 @@
+.phone-frame {
+  width: 300px;
+  padding: 10px 8px 12px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #1b1f22, #0d1115);
+  box-shadow: 0 30px 40px rgba(17, 24, 31, 0.25);
+  position: relative;
+}
+
+.phone-frame::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.phone-screen {
+  position: relative;
+  background: linear-gradient(180deg, #edf8ff 0%, #eff4f7 100%);
+  border-radius: 22px;
+  min-height: 640px;
+  padding: 42px 16px 0;
+  overflow: hidden;
+}
+
+.phone-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  padding: 0 2px;
+  color: #0a3a4f;
+}
+
+.back-btn {
+  border: none;
+  background: transparent;
+  font-size: 2rem;
+  line-height: 1;
+  color: #0b4260;
+}
+
+.phone-header h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.status-icons {
+  font-size: 0.9rem;
+  color: #1d5c86;
+}
+
+.book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.journey-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.mini-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mini-field span {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #406981;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.mini-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  background: rgba(228, 235, 239, 0.92);
+  border: 1px solid rgba(138, 164, 178, 0.4);
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.mini-input input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #1c4a65;
+  font-size: 0.82rem;
+  outline: none;
+}
+
+.pin-icon {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #1b83d5;
+  box-shadow: 0 0 0 2px rgba(27, 131, 213, 0.15);
+}
+
+.date-input {
+  min-height: 42px;
+}
+
+.ride-offers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.offer-card {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(126, 159, 180, 0.22);
+  border-radius: 14px;
+  padding: 12px 10px;
+}
+
+.avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffb167, #e4762a);
+}
+
+.avatar-sun { background: linear-gradient(135deg, #ffbf69, #d57c2d); }
+.avatar-pink { background: linear-gradient(135deg, #ffaec3, #dd4b8d); }
+.avatar-gold { background: linear-gradient(135deg, #f7d270, #d89a1d); }
+
+.offer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.name-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: #2a465c;
+}
+
+.name-row strong {
+  font-size: 0.9rem;
+}
+
+.star {
+  color: #ffc93d;
+}
+
+
+
+.book-btn {
+  grid-column: 1 / -1;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #1e9ae6, #1b75c3);
+  color: white;
+  font-weight: 800;
+  padding: 12px 14px;
+  margin-top: 4px;
+}

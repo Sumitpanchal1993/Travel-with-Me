@@ -1,0 +1,94 @@
+.ride-form-card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(108, 140, 156, 0.2);
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+  box-shadow: 0 12px 30px rgba(43, 72, 86, 0.08);
+}
+
+.ride-form-header {
+  margin-bottom: 14px;
+}
+
+.ride-form-header h3 {
+  font-size: clamp(1.5rem, 1.7vw, 2.2rem);
+  color: #0d3d52;
+  font-weight: 800;
+  text-align: center;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field span {
+  font-size: 0.88rem;
+  color: #335b70;
+  font-weight: 700;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(228, 235, 239, 0.9);
+  border: 1px solid rgba(127, 147, 161, 0.38);
+  border-radius: 10px;
+  min-height: 42px;
+  padding: 0 10px;
+}
+
+.input-box input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #244b63;
+  font-size: 0.92rem;
+  outline: none;
+}
+
+.pin-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #1d7cc8;
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 0 0 2px rgba(29, 124, 200, 0.15);
+}
+
+.date-box,
+.select-box {
+  background: rgba(240, 244, 245, 0.92);
+}
+
+.primary-button {
+  width: 100%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #1d9ae5, #1a73c2);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 14px 18px;
+  box-shadow: 0 12px 24px rgba(22, 118, 191, 0.25);
+}
+
+@media (max-width: 720px) {
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+}

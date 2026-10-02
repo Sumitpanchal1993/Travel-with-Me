@@ -1,0 +1,251 @@
+:root {
+  font-family: Inter, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1a2733;
+  background: #dfeaf3;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #dfeaf3;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+
+
+.app-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: linear-gradient(180deg, #a9c5d2 0%, #b7d3dd 100%);
+}
+
+.browser-shell {
+  width: min(1310px, 100%);
+  background: rgba(220, 233, 239, 0.82);
+  border: 1px solid rgba(109, 127, 140, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(29, 55, 70, 0.12);
+  overflow: hidden;
+}
+
+.browser-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  height: 58px;
+  padding: 10px 14px 8px;
+  background: #e5edf4;
+  border-bottom: 1px solid rgba(92, 111, 125, 0.2);
+}
+
+.browser-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tab-pill {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(123, 136, 145, 0.2);
+  border-radius: 10px 10px 0 0;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  color: #3b536b;
+  font-weight: 600;
+}
+
+.tab-pill.active {
+  background: #fff;
+  box-shadow: inset 0 -2px 0 rgba(42, 121, 182, 0.14);
+}
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #48677d;
+}
+
+.browser-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px 0;
+  background: #edf2f5;
+}
+
+.action-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.action-row .nav-arrow,
+.action-row .icon-btn {
+  font-size: 1.2rem;
+  color: #3b556d;
+}
+
+.address-bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(122, 140, 151, 0.15);
+  color: #465e72;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.scene-shell {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 28px;
+  padding: 24px 18px 22px;
+  background: linear-gradient(180deg, #b7d1dc 0%, #b0cada 100%);
+}
+
+.desktop-panel {
+  width: min(790px, 64vw);
+  min-width: 560px;
+  padding: 16px 16px 0;
+  border-radius: 28px 28px 0 0;
+  background: rgba(28, 30, 33, 0.92);
+  box-shadow: 0 18px 50px rgba(12, 31, 39, 0.25);
+}
+
+.desktop-screen {
+  position: relative;
+  min-height: 700px;
+  background: linear-gradient(180deg, #f4f9fc 0%, #eef5f1 100%);
+  border-radius: 20px 20px 0 0;
+  padding: 18px 18px 20px;
+  overflow: hidden;
+}
+
+.desktop-screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.22), transparent 30%);
+  pointer-events: none;
+}
+
+.hero-title {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(2rem, 1.9vw, 3rem);
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #0d3f52;
+  margin: 18px 0 14px;
+}
+
+.my-rides-section {
+  position: relative;
+  z-index: 1;
+  margin-top: 16px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.section-header h2 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #103d50;
+}
+
+.section-header button {
+  background: rgba(31, 115, 169, 0.08);
+  border: 1px solid #2d8ed6;
+  color: #125d95;
+  border-radius: 8px;
+  padding: 7px 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ride-list-row {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.phone-panel {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 980px) {
+  .app-page {
+    padding: 10px;
+  }
+
+  .browser-shell {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .browser-toolbar,
+  .browser-actions,
+  .desktop-panel {
+    display: none;
+  }
+
+  .scene-shell {
+    display: flex;
+    justify-content: center;
+    padding: 12px 10px 16px;
+    background: linear-gradient(180deg, #b6cfda 0%, #cfe0e8 100%);
+  }
+
+  .phone-panel {
+    width: 100%;
+    max-width: 360px;
+  }
+}
