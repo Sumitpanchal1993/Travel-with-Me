@@ -3,7 +3,10 @@ import './App.css'
 import FooterBar from './Components/FooterBar'
 import TopNavBar from './Components/TopNavBar'
 import Home from './Pages/Home'
-import LoaderPage from "./Pages/LoaderPage"
+import LoaderPage from "./Components/LoaderPage"
+import RideCard from './Components/RideCard'
+import { Route, Routes } from 'react-router-dom'
+import UserProfile from './Pages/UserProfile'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -22,19 +25,22 @@ function App() {
 
   return (
     <>
-    <header>
-      <TopNavBar/>
-    </header>
-    <main>
       <LoaderPage isLoading={isLoading} />
-      {/* <RideCard/> */}
-      <Home/>
-    </main>
-    <footer>
-      <FooterBar/>
-    </footer>
+      <header>
+        <TopNavBar />
+      </header>
+
+      <main>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/myprofile' element={<UserProfile />} />
+        </Routes>
+      </main>
+      <footer>
+        <FooterBar />
+      </footer>
     </>
-      
+
   )
 }
 

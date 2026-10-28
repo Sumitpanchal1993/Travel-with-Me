@@ -1,6 +1,7 @@
 import React from 'react'
 import Logo from "../assets/Logo.png"
 import "./TopNavBar.css"
+import { Link } from 'react-router-dom'
 
 function TopNavBar() {
   return (
@@ -17,10 +18,10 @@ function TopNavBar() {
         <div className='topNavoptions'>
           <div>
             <ul>
-              <li>Register Ride</li>
-              <li>Find Ride</li>
-              <li>My Trips</li>
-              <li>My Profile</li>
+              <li><Link to={"/registerride"}>Register Ride</Link></li>
+              <li><Link to={"/findride"}>Find Ride</Link></li>
+              <li><Link to={"/mytrips"}>My Trips</Link></li>
+              <li><Link to={"/myprofile"}>My Profile</Link></li>
             </ul>
           </div>
           <div>
